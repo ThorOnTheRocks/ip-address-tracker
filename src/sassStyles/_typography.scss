@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+body {
+  font-size: $default-font-size;
+  font-family: $default-font-family;
+
+  h1 {
+    color: $color-white;
+  }
+}

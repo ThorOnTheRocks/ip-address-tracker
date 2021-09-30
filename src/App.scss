@@ -1,0 +1,22 @@
+@import './sassStyles/typography';
+
+.App  {
+  background-image: url(./images/pattern-bg.png);
+  background-repeat: no-repeat;
+  // background-size: 150rem;
+  width: 38rem;
+  height: 40rem;
+  
+
+  .container__heading {
+    padding-top: 2rem;
+
+    .heading {
+      text-align: center;
+      font-weight: $font-weight-sm;
+    }
+    
+  }
+  
+ 
+}

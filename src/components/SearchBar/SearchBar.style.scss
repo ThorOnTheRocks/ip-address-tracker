@@ -1,0 +1,33 @@
+.searchbar__box {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 2.5rem;
+  align-items: center;
+  width: 90%;
+  overflow: hidden;
+}
+
+.searchbar__input {
+  width: 90%;
+  height: 4rem;
+  border: none;
+  border-radius: 1rem 0 0 1rem;
+  outline: none;
+  color: #000;
+  padding: 1.6rem ;
+}
+
+.searchbar__button {
+  width: 5rem;
+  height: 4.2rem;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+}
+  
+
