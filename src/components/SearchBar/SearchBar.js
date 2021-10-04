@@ -1,23 +1,32 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
+import fetchIpGeo from '../../API';
 
 import IconArrow from '../../images/icon-arrow.svg'
 
 // Styles
 import './SearchBar.style.scss';
 
-const SearchBar = () => {
+const SearchBar = ({ onQueryIp }) => {
+
+  let textInput = React.createRef()
+
+  const handleClick = () => {
+    onQueryIp(textInput.current.value)
+  }
+
   return (
     <div>
-      <div className="searchbar__box">
+      <form onSubmit={(e) => e.preventDefault()} className="searchbar__box">
         <input
           className="searchbar__input"
           type="text"
           name="search"
+          ref={textInput}
         />
-        <button className="searchbar__button" type="submit">
+        <button className="searchbar__button" type="submit" onClick={handleClick}>
           <img src={IconArrow} alt="logo arrow" />
         </button>
-      </div>
+      </form>
 
     </div>
   )
