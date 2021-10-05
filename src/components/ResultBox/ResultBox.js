@@ -1,8 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react/cjs/react.development";
-
 import Loader from "../Loader/Loader";
-import fetchIpGeo from "../../API";
 
 // Styles
 import './ResultBox.styles.scss'
@@ -18,6 +15,7 @@ const ResultBox = ({ queryIp, defaultIp, isFetching }) => {
           <Loader />
         </>
       }
+
       {defaultIp &&
         <>
           <div className="result result__ip">
