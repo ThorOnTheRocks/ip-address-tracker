@@ -5,16 +5,15 @@ import Loader from "../Loader/Loader";
 import './ResultBox.styles.scss'
 
 const ResultBox = ({ queryIp, defaultIp, isFetching }) => {
-
   return (
     <div className="result__container">
 
-      {isFetching &&
+      {/* {isFetching &&
         <>
           <p>Fetching your local IP address details....</p>
           <Loader />
         </>
-      }
+      } */}
 
       {defaultIp &&
         <>
@@ -28,7 +27,7 @@ const ResultBox = ({ queryIp, defaultIp, isFetching }) => {
           </div>
           <div className="result result__timezone">
             <h2 className="result__heading">Timezone</h2>
-            <p className="result__paragraph">{defaultIp.location.timezone}</p>
+            <p className="result__paragraph">UTC {defaultIp.location.timezone}</p>
           </div>
           <div className="result result__isp">
             <h2 className="result__heading">ISP</h2>
@@ -49,7 +48,7 @@ const ResultBox = ({ queryIp, defaultIp, isFetching }) => {
           </div>
           <div className="result result__timezone">
             <h2 className="result__heading">Timezone</h2>
-            <p className="result__paragraph">{queryIp.location.timezone}</p>
+            <p className="result__paragraph">UTC {queryIp.location.timezone}</p>
           </div>
           <div className="result result__isp">
             <h2 className="result__heading">ISP</h2>
@@ -57,8 +56,6 @@ const ResultBox = ({ queryIp, defaultIp, isFetching }) => {
           </div>
         </>
       }
-
-
     </div>
 
   )

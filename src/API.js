@@ -1,4 +1,4 @@
-import { API_IP_URL, API_KEY, BASE_SEARCH } from './config';
+import { BASE_SEARCH } from './config';
 
 const fetchIpGeo = async (ipAddress) => {
   const endpoint = `${BASE_SEARCH}${ipAddress}`;

@@ -8,7 +8,7 @@ import './SearchBar.style.scss';
 
 const SearchBar = ({ onQueryIp }) => {
 
-  let textInput = React.createRef()
+  let textInput = React.createRef();
 
   const handleClick = () => {
     onQueryIp(textInput.current.value)
