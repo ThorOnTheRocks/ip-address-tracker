@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Alert } from "@mui/material";
 
 // Components
 import SearchBar from "./components/SearchBar/SearchBar";
@@ -34,18 +35,16 @@ function App() {
     }
   }, [queryIp])
 
-  console.log(queryIp)
-
   const searchIp = (query) => {
     if (query.match(regexIp)) {
+      setDefaultIp(false);
       setTimeout(fetchIpGeo(query).then((ipData) => {
+        setIsfetching(false)
         setQueryIp(ipData)
       }), 1000)
     } else {
-      alert("Invalid Ip Address")
+      alert("Please inser a valid Ip Address!")
     }
-
-
     return query
   }
 

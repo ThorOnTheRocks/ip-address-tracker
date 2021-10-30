@@ -4,7 +4,7 @@
 .App  {
   background-image: url(./images/pattern-bg.png);
   background-repeat: no-repeat;
-  // background-size: 150rem;
+  
   width: 38rem;
   height: 80rem;
 
@@ -20,6 +20,11 @@
     width: 105rem;
   }
 
+  @include respond(big-desktop){
+    background-size: 180rem;
+    width: 168rem;
+  }
+
   .container__heading {
     padding-top: 2rem;
 
@@ -29,6 +34,10 @@
 
       @include respond(tab-sm){
         font-size: 3rem;
+      }
+
+      @include respond(big-desktop){
+        font-size: 4.3rem;
       }
     }
     

@@ -51,14 +51,17 @@ const ResultBox = ({ queryIp, defaultIp, isFetching }) => {
             <h2 className="result__heading">IP Address</h2>
             <p className="result__paragraph">{queryIp.ip}</p>
           </div>
+          <div className="line"></div>
           <div className="result result__location">
             <h2 className="result__heading">Location</h2>
             <p className="result__paragraph">{queryIp.location.city}, {queryIp.location.country} {queryIp.location.postalCode}</p>
           </div>
+          <div className="line"></div>
           <div className="result result__timezone">
             <h2 className="result__heading">Timezone</h2>
             <p className="result__paragraph">UTC {queryIp.location.timezone}</p>
           </div>
+          <div className="line"></div>
           <div className="result result__isp">
             <h2 className="result__heading">ISP</h2>
             <p className="result__paragraph">{addLineBreak(queryIp.isp)}</p>

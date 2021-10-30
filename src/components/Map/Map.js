@@ -41,10 +41,11 @@ const Map = ({ defaultIp, queryIp }) => {
       {queryIp &&
         <>
           <MapContainer
+            id="mapid"
             key={JSON.stringify([queryIp.location.lat, queryIp.location.lng])}
-            style={{ height: '80rem', zIndex: '-10', top: '5rem' }}
+            style={{ zIndex: '-10', top: '5rem' }}
             center={[queryIp.location.lat, queryIp.location.lng]}
-            zoom={16}
+            zoom={17}
             scrollWheelZoom={true}
           >
             <TileLayer

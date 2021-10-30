@@ -18,19 +18,23 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    width: 85%;
+    width: 90%;
     padding: 3rem;
     position: relative;
     bottom: 76rem;
-    justify-content: space-between;
     margin: .5rem auto;
+  }
+
+  @include respond(big-desktop){
+    width: 75%;
+    bottom: 74rem;
   }
 
   .result {
     margin: 1rem 0;
 
     @include respond(tab-bg){
-      margin: 0;
+      margin: 1rem;
       position: relative;
       padding: 0 3rem;
     }
@@ -42,8 +46,18 @@
 
   @include respond(tab-bg){
     .line {
-      width   : 5rem;
+      width   : .6rem;
       height  : 10rem;   
+      position: relative;
+      z-index : 1;
+      background: #eee;
+    }
+  }
+
+  @include respond(big-desktop){
+    .line {
+      width   : .3rem;
+      height  : 13rem;   
       position: relative;
       z-index : 1;
       background: #eee;
@@ -68,6 +82,12 @@
       margin-bottom: 2rem;
       
     }
+
+    @include respond(big-desktop){
+      text-align: left;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
   }
 
   .result__paragraph {
@@ -77,12 +97,14 @@
 
     @include respond(tab-bg){
       text-align: left;
-      font-size: 2.5rem;
     }
-  }
 
-  .display-linebreak {
-    white-space: pre-line;
+    @include respond(big-desktop){
+      text-align: left;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      margin-bottom: .1rem;
+    }
   }
 
   

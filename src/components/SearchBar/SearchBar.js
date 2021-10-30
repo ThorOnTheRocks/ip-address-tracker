@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import fetchIpGeo from '../../API';
 
 import IconArrow from '../../images/icon-arrow.svg'
 

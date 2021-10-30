@@ -9,13 +9,18 @@
   padding-top: 2.5rem;
   align-items: center;
   width: 90%;
-  overflow: hidden; 
+  overflow: hidden;
+  
+  @include respond(big-desktop){
+    padding-top: 3rem;
+
+  }
   
   
 }
 
 .searchbar__input {
-  width: 90%;
+  width: 80%;
   height: 4rem;
   border: none;
   border-radius: 1rem 0 0 1rem;
@@ -25,6 +30,26 @@
 
   @include respond(tab-sm){
     padding: 2rem;
+
+  }
+
+  @include respond(tab-sm){
+    padding: 2rem;
+    width: 50%;
+
+  }
+
+  @include respond(tab-bg){
+    padding: 2.7rem;
+    width: 50%;
+    font-size: 2rem;
+
+  }
+
+  @include respond(big-desktop){
+    padding: 2.7rem;
+    width: 50%;
+    font-size: 2rem;
 
   }
   
@@ -40,8 +65,13 @@
   cursor: pointer;
   font-size: 2rem;
 
-  @include respond(tab-port){
-    height: 6rem;
+  @include respond(tab-bg){
+    height: 5.5rem;
+  }
+
+  @include respond(big-desktop){
+    height: 5.5rem;
+
   }
 
 }
