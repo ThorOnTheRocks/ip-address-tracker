@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+@mixin respond($breakpoint) {
+  
+  @if $breakpoint == mobilePlus {
+    @media only screen and (min-width: $screen-mobilePlus) {@content};
+  }
+
+  @if $breakpoint == tab-sm {
+    @media only screen and (min-width: $screen-tabletSm) {@content};
+  }
+
+  @if $breakpoint == tab-bg {
+    @media only screen and (min-width: $screen-tabletLg) {@content};
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: $screen-full) {@content};
+  }
+
+}

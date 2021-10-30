@@ -1,3 +1,6 @@
+@import '../../sassStyles/mixins.scss';
+@import '../../sassStyles/variables.scss';
+
 .searchbar__box {
   margin: 0 auto;
   position: relative;
@@ -6,7 +9,9 @@
   padding-top: 2.5rem;
   align-items: center;
   width: 90%;
-  overflow: hidden;
+  overflow: hidden; 
+  
+  
 }
 
 .searchbar__input {
@@ -17,6 +22,12 @@
   outline: none;
   color: #000;
   padding: 1.6rem ;
+
+  @include respond(tab-sm){
+    padding: 2rem;
+
+  }
+  
 }
 
 .searchbar__button {
@@ -28,6 +39,11 @@
   color: #fff;
   cursor: pointer;
   font-size: 2rem;
+
+  @include respond(tab-port){
+    height: 6rem;
+  }
+
 }
   
 

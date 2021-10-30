@@ -22,6 +22,7 @@ const SearchBar = ({ onQueryIp }) => {
           type="text"
           name="search"
           ref={textInput}
+          placeholder="Search for Ip Address..."
         />
         <button className="searchbar__button" type="submit" onClick={handleClick}>
           <img src={IconArrow} alt="logo arrow" />

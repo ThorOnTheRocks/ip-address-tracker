@@ -1,12 +1,24 @@
 @import './sassStyles/typography';
+@import './sassStyles/mixins.scss';
 
 .App  {
   background-image: url(./images/pattern-bg.png);
   background-repeat: no-repeat;
   // background-size: 150rem;
   width: 38rem;
-  height: 40rem;
-  
+  height: 80rem;
+
+  @include respond(mobilePlus){
+    width: 42rem;
+  }
+
+  @include respond(tab-sm){
+    width: 77rem;
+  }
+
+  @include respond(tab-bg){
+    width: 105rem;
+  }
 
   .container__heading {
     padding-top: 2rem;
@@ -14,9 +26,11 @@
     .heading {
       text-align: center;
       font-weight: $font-weight-sm;
+
+      @include respond(tab-sm){
+        font-size: 3rem;
+      }
     }
     
   }
-  
- 
 }
